@@ -13,6 +13,7 @@ import de.panzenbaby.ui.views.utils.RecyclerHeaderHelper
 
 import kotlinx.android.synthetic.main.activity_main.*
 
+private const val ITEM_COUNT : Int = 20
 private const val FAKE_LOADING_TIME: Long = 2000
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        recyclerView.adapter = SimpleRecyclerAdapter()
+        recyclerView.adapter = SimpleRecyclerAdapter(ITEM_COUNT)
         mHeaderHelper.attach(recyclerView, recyclerHeader)
         mFooterHelper.attach(recyclerView, recyclerFooter)
 
@@ -44,7 +45,9 @@ class MainActivity : AppCompatActivity() {
         }, FAKE_LOADING_TIME)
     }
 
-    class SimpleRecyclerAdapter : RecyclerView.Adapter<SimpleViewHolder>() {
+    class SimpleRecyclerAdapter(itemCount: Int) : RecyclerView.Adapter<SimpleViewHolder>() {
+
+        private val mItemCount = itemCount
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimpleViewHolder {
             val child = LayoutInflater.from(parent.context).inflate(R.layout.item_simple, parent, false)
@@ -56,7 +59,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun getItemCount(): Int {
-            return 20
+            return mItemCount
         }
     }
 
