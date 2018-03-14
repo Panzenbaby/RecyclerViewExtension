@@ -1,14 +1,12 @@
-# RecyclerViewExtension
+# RecyclerViewExtension [ ![Download](https://api.bintray.com/packages/panzenbaby/RecyclerViewExtensions/RecyclerViewExtensions/images/download.svg) ](https://bintray.com/panzenbaby/RecyclerViewExtensions/RecyclerViewExtensions/_latestVersion)
 
 Extends the RecyclerView with some features.
-
-[ ![Download](https://api.bintray.com/packages/panzenbaby/RecyclerViewExtensions/RecyclerViewExtensions/images/download.svg) ](https://bintray.com/panzenbaby/RecyclerViewExtensions/RecyclerViewExtensions/_latestVersion)
 
 The plan is to fill up this library with some useful extensions over time.
 
 # Installation
 
-RecycleViewExtension is distributed via jCenter. [ ![Download](https://api.bintray.com/packages/panzenbaby/RecyclerViewExtensions/RecyclerViewExtensions/images/download.svg) ](https://bintray.com/panzenbaby/RecyclerViewExtensions/RecyclerViewExtensions/_latestVersion)
+RecycleViewExtension is distributed via jCenter.
 
 ```groovy
 dependencies {
