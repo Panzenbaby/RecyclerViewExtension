@@ -1,0 +1,46 @@
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+ext {
+    groupId = 'de.panzenbaby'
+    artifactId = 'RecyclerViewExtensions'
+    libVersion = '1.0'
+}
+
+version = libVersion
+group = groupId
+
+bintray {
+    user = bintrayUser
+    key = bintrayApiKey
+
+    configurations = ['archives']
+    publish true
+    override = true
+
+    pkg {
+        repo = 'RecyclerViewExtensions'
+        name = 'RecyclerViewExtensions'
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/Panzenbaby/RecyclerViewExtension.git'
+
+        version {
+            name = '1.0'
+            desc = 'Extens the RecyclerView with some cool features.'
+            released  = new Date()
+            vcsTag = '1.0'
+        }
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            packaging 'aar'
+            groupId groupId
+            artifactId artifactId
+            version libVersion
+            name artifactId
+        }
+    }
+}
