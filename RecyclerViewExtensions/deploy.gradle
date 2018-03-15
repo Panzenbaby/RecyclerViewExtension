@@ -40,7 +40,6 @@ install {
             groupId groupId
             artifactId artifactId
             version libVersion
-            name artifactId
         }
     }
 }
