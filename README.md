@@ -18,7 +18,7 @@ dependencies {
 
 ## Motivation
 
-In the first version this library provides the possibility to add a header or a footer view to a RecyclerView.
+This library provides the possibility to add a header or a footer view to a RecyclerView.
 This functionality is known from the old ListView where you could simple add a view as header or footer.
 Unfortunately Google did not implement this feature for the RecyclerView.
 
@@ -34,6 +34,8 @@ created header or footer data.
 ## Idea
 
 Use views as header or footer which does not be children of the recycler view.
+
+![](https://github.com/Panzenbaby/RecyclerViewExtensions/blob/master/excample.gif)
 
 ## HowTo
 
